@@ -1,0 +1,93 @@
+{
+	"info": {
+		"_postman_id": "f1a60bd4-3ff7-4d5f-b6c3-a45c075d9c4c",
+		"name": "Http-Api_DynamoDB-CRUD [AWS-API Gateway]",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17704774"
+	},
+	"item": [
+		{
+			"name": "Get All Items",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://uji33cdo4d.execute-api.us-east-1.amazonaws.com/items",
+					"protocol": "https",
+					"host": [
+						"uji33cdo4d",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"items"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload New Item",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"2347689\",\r\n    \"price\": \"33.67 $\",\r\n    \"name\": \"Lakme C Vitamin Cream\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://uji33cdo4d.execute-api.us-east-1.amazonaws.com/items",
+					"protocol": "https",
+					"host": [
+						"uji33cdo4d",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"items"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Item",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://uji33cdo4d.execute-api.us-east-1.amazonaws.com/items/3278789",
+					"protocol": "https",
+					"host": [
+						"uji33cdo4d",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"items",
+						"3278789"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
