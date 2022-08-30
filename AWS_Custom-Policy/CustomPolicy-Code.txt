@@ -1,0 +1,13 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "Stmt1661187565013",
+            "Action": [
+                "dynamodb:PutItem"
+            ],
+            "Effect": "Allow",
+            "Resource": "arn:aws:dynamodb:ap-south-1:852658168719:table/studentData_DDB"
+        }
+    ]
+}
