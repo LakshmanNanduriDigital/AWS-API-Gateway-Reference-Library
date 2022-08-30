@@ -1,0 +1,36 @@
+{
+	"info": {
+		"_postman_id": "8e7f8d3e-989a-4349-bb4e-bc71c2b0ce5a",
+		"name": "[AWS ]Mocking Rest API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17704774"
+	},
+	"item": [
+		{
+			"name": "Get Forbes List",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://mf3h40dbi7.execute-api.ap-south-1.amazonaws.com/production/forbeslist",
+					"protocol": "https",
+					"host": [
+						"mf3h40dbi7",
+						"execute-api",
+						"ap-south-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"production",
+						"forbeslist"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
