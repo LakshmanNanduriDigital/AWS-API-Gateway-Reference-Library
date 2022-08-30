@@ -1,0 +1,40 @@
+exports.handler = async (event) => {
+    // TODO implement
+    const response = {
+        statusCode: 200,
+        body: {"topbooks2020": [{
+    "bookInfo": {
+      "name": "Tuesday with Morries",
+      "author": "Glenn Mack",
+      "rank": 1
+    }},
+    
+    {"bookInfo": {
+      "name": "Damon tales",
+      "author": "Glenn Mack",
+      "rank": 2
+
+    }},
+    
+    {"bookInfo": {
+      "name": "Wolf Bane",
+      "author": "Samuel Paul",
+      "rank": 3
+
+    }},
+    {"bookInfo": {
+      "name": "Darling !",
+      "author": "Killian Murphy",
+      "rank": 4
+
+    }},
+    {"bookInfo": {
+      "name": "Gallion Fang",
+      "author": "Glenn Mack",
+      "rank": 5
+
+    }}]}
+,
+    };
+    return response;
+};
