@@ -1,0 +1,39 @@
+{
+	"info": {
+		"_postman_id": "c94d1681-61c1-4b00-8672-9a37a22a9ab4",
+		"name": "[AWS-AG] Cognito",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17704774"
+	},
+	"item": [
+		{
+			"name": "Get Forbes List",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJraWQiOiIrNmVkUE5wTU9CQVhCeitNamdWSXNVNmJBbGlLRjhwUU1hU3I4UjNsVmM0PSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJkNDNmNWU1Ny1lYTVjLTQ0YTItOTE2MS1jMGU0ZWEzMWI4ODIiLCJ0b2tlbl91c2UiOiJhY2Nlc3MiLCJzY29wZSI6ImF3cy5jb2duaXRvLnNpZ25pbi51c2VyLmFkbWluIHBob25lIG9wZW5pZCBwcm9maWxlIGVtYWlsIiwiYXV0aF90aW1lIjoxNjYxMDc2MzM5LCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAuYXAtc291dGgtMS5hbWF6b25hd3MuY29tXC9hcC1zb3V0aC0xX3FOVU5CRXZmOCIsImV4cCI6MTY2MTA3OTkzOSwiaWF0IjoxNjYxMDc2MzM5LCJ2ZXJzaW9uIjoyLCJqdGkiOiI5NWRiNzg5OS1jZjAxLTQ4NGEtODAzMC01NThjNTYyYWM0YzciLCJjbGllbnRfaWQiOiI3OTJkc3JwbWo4N2E3cm5hZjJkMTVjbDJqZiIsInVzZXJuYW1lIjoiYWtoZWxhYWRpdHlhIn0.c1ATkqmuvBs4WyXO0SOi67ItrMovcrj37KP9JGDD6ZVXRUuHPKeDSIy86Y77QRBYrrnbYhvLlsEVFT5VoSQelgZxjy4bpuwCDu1vX6U0DolyFbg53ydYlS7S0Hx5p00lF8PrOtxqL7W4UGLHuCqXzKyD2RSr3sXIMVOLssUGRNvSYHE_8oh0RlqNo6BXvu-1CdeCYkGm960gx-IcI58vNCDACXPzFtwZu7EovXD0m-08JFq3QIvTYZG37wVOTY8oL2lAw26x6jqG3LnZ8Bje-tOpLC3mBKOU3VtHKyuMfLW5yBMq8ZwhAn6KQ9SgziqhBATASpPjN401CDhZjNnA6Q",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://mf3h40dbi7.execute-api.ap-south-1.amazonaws.com/production/forbeslist",
+					"protocol": "https",
+					"host": [
+						"mf3h40dbi7",
+						"execute-api",
+						"ap-south-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"production",
+						"forbeslist"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

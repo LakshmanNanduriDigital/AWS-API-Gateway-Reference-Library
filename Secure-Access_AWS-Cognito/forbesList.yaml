@@ -1,0 +1,65 @@
+exports.handler = async (event) => {
+    // TODO implement
+    const response = {
+        statusCode: 200,
+        body: {
+  "Sports": [
+    {
+      "name": "Christiano Ronaldo",
+      "rank": 1,
+      "country": "Portugal",
+      "category": "Sports"
+    },
+    {
+      "name": "Messi",
+      "rank": 2,
+      "country": "Argentina",
+      "category": "Sports"
+    }
+  ],
+  "Modelling": [
+    {
+      "name": "Kendell Jenner",
+      "rank": 1,
+      "country": "UK",
+      "category": "Modelling"
+    },
+    {
+      "name": "Gigi Hadid",
+      "rank": 2,
+      "country": "Australia",
+      "category": "Modelling"
+    }
+  ],
+  "Music": [
+    {
+      "name": "Kanye West",
+      "rank": 1,
+      "country": "USA",
+      "category": "Music"
+    }
+  ],
+  "Movies": [
+    {
+      "name": "Dwayne Johnson",
+      "rank": 1,
+      "country": "USA",
+      "category": "Movies"
+    },
+    {
+      "name": "Prabhas",
+      "rank": 2,
+      "country": "India",
+      "category": "Movies"
+    },
+    {
+      "name": "Will Smith",
+      "rank": 3,
+      "country": "Canada",
+      "category": "Movies"
+    }
+  ]
+},
+    };
+    return response;
+};

@@ -1,0 +1,34 @@
+openapi: "3.0.1"
+info:
+  title: "Forbes-List"
+  description: "Contains the list of the richest people"
+  version: "2022-08-21T10:32:04Z"
+servers:
+- url: "https://mf3h40dbi7.execute-api.ap-south-1.amazonaws.com/{basePath}"
+  variables:
+    basePath:
+      default: "/production"
+paths:
+  /forbeslist:
+    get:
+      responses:
+        "200":
+          description: "200 response"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Empty"
+      security:
+      - cogintoTutorialAuthorizer:
+        - "email"
+components:
+  schemas:
+    Empty:
+      title: "Empty Schema"
+      type: "object"
+  securitySchemes:
+    cogintoTutorialAuthorizer:
+      type: "apiKey"
+      name: "Authorization"
+      in: "header"
+      x-amazon-apigateway-authtype: "cognito_user_pools"
