@@ -1,0 +1,8 @@
+  {
+    "TableName": "studentData_DDB",
+    "Item": {
+        "studentName": {"S": $input.json('$.studentDetails.name')},
+        "course": {"S": $input.json('$.studentDetails.course')},
+        "registrationID": {"S": "$input.params('registrationID')"}
+    }
+}

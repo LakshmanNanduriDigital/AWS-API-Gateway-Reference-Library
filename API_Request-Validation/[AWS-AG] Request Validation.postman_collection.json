@@ -1,0 +1,48 @@
+{
+	"info": {
+		"_postman_id": "33c33a6f-90f6-495d-a926-5dfaa54e7636",
+		"name": "[AWS-AG] Request Validation",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17704774"
+	},
+	"item": [
+		{
+			"name": "Add Student Details",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"studentDetails\":{\r\n\"name\": \"Griezmann\",\r\n\"course\": \"Mechanical\",\r\n\"nationality\": \"Canadian\",\r\n\"phoneNumber\": \"98979798687\"\r\n},\r\n\"tuitionFee\": \"$1000\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://lo5cvnleli.execute-api.ap-south-1.amazonaws.com/production/storestudentdata?registrationID=9876237",
+					"protocol": "https",
+					"host": [
+						"lo5cvnleli",
+						"execute-api",
+						"ap-south-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"production",
+						"storestudentdata"
+					],
+					"query": [
+						{
+							"key": "registrationID",
+							"value": "9876237"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

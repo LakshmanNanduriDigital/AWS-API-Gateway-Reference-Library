@@ -1,0 +1,80 @@
+openapi: "3.0.1"
+info:
+  title: "ManchesterUni"
+  version: "2022-08-22T19:51:08Z"
+servers:
+- url: "https://lo5cvnleli.execute-api.ap-south-1.amazonaws.com/{basePath}"
+  variables:
+    basePath:
+      default: "/production"
+paths:
+  /storestudentdata:
+    post:
+      parameters:
+      - name: "registrationID"
+        in: "query"
+        required: true
+        schema:
+          type: "string"
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/studentInfo"
+        required: true
+      responses:
+        "200":
+          description: "200 response"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Empty"
+      x-amazon-apigateway-request-validator: "Validate body, query string parameters,\
+        \ and headers"
+      x-amazon-apigateway-integration:
+        credentials: "arn:aws:iam::852658168719:role/DynamoDB-API"
+        httpMethod: "POST"
+        uri: "arn:aws:apigateway:ap-south-1:dynamodb:action/PutItem"
+        responses:
+          default:
+            statusCode: "200"
+        requestTemplates:
+          application/json: "  {\n    \"TableName\": \"studentData_DDB\",\n    \"\
+            Item\": {\n        \"studentName\": {\"S\": $input.json('$.studentDetails.name')},\n\
+            \        \"course\": {\"S\": $input.json('$.studentDetails.course')},\n\
+            \        \"registrationID\": {\"S\": \"$input.params('registrationID')\"\
+            }\n    }\n}"
+        passthroughBehavior: "when_no_templates"
+        type: "aws"
+components:
+  schemas:
+    Empty:
+      title: "Empty Schema"
+      type: "object"
+    studentInfo:
+      required:
+      - "studentDetails"
+      type: "object"
+      properties:
+        studentDetails:
+          required:
+          - "course"
+          - "name"
+          - "nationality"
+          - "phoneNumber"
+          type: "object"
+          properties:
+            name:
+              type: "string"
+            course:
+              type: "string"
+            nationality:
+              type: "string"
+            phoneNumber:
+              type: "string"
+        tuitionFee:
+          type: "string"
+x-amazon-apigateway-request-validators:
+  Validate body, query string parameters, and headers:
+    validateRequestParameters: true
+    validateRequestBody: true
