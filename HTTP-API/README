@@ -1,1 +1,7 @@
 
+START:
+Follow the doc file and implement each step, This would give you lucid understanding and it would be a quick POC.
+
+NOTE: The Postman collections and the URLs present in the yaml files will not function, those are just for understanding. Its because by now the APIs would have been deleted as
+it is cost consuming.
+
