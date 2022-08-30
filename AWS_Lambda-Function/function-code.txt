@@ -1,0 +1,42 @@
+exports.handler = async (event) => {
+    // TODO implement
+    const response = {
+        statusCode: 200,
+        body: {"topbooks2021": [{
+    "bookInfo": {
+      "name": "Monk who sold his ferrari",
+      "author": "Robhin Sharma",
+      "rank": 1
+    }},
+    
+    {"bookInfo": {
+      "name": "Naruto Shippuden",
+      "author": "Shirayoshi",
+      "rank": 2
+
+    }},
+    
+    {"bookInfo": {
+      "name": "Who moved my ",
+      "author": "Samuel Paul",
+      "rank": 3
+
+    }},
+    {"bookInfo": {
+      "name": "Darling !",
+      "author": "Killian Murphy",
+      "rank": 4
+
+    }},
+    {"bookInfo": {
+      "name": "Gallion Fang",
+      "author": "Glenn Mack",
+      "rank": 5
+
+    }}]}
+,
+    };
+    return response;
+};
+
+
